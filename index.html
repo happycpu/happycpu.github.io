@@ -16,9 +16,14 @@
       const minute = now.getMinutes();
       const second = now.getSeconds();
       const millisecond = now.getMilliseconds();
+      const day = now.getDate();
+      const month = now.getMonth() + 1;
+      const year = now.getFullYear();
 
       const time = hour + ":" + minute + ":" + second + "." + millisecond;
-      document.getElementById("clock").innerText = time;
+      const date = day + "일 " + month + "월 " + year;
+
+      document.getElementById("clock").innerText = time + " | " + date;
     }
 
     currentTime();
@@ -26,4 +31,3 @@
   </script>
 </body>
 </html>
-
