@@ -24,7 +24,9 @@
         minute.toString().padStart(2, '0') + ":" +
         second.toString().padStart(2, '0') + "." +
         millisecond.toString().padStart(3, '0');
-      const date = year + "년 " + month + "월 " + day + "일";
+      const date = year.toString().padStart(4, '0') + "년 " +
+        month.toString().padStart(2, '0') + "월 " +
+        day.toString().padStart(2, '0') + "일";
 
       document.getElementById("clock").innerText = date + " | " + time;
     }
