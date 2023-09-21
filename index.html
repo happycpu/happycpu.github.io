@@ -6,7 +6,8 @@
 </head>
 <body>
   <h1>전자시계</h1>
-  <div id="clock"></div>
+  <div id="clock" style="font-size: 24px;">
+  </div>
 
   <script>
     function currentTime() {
@@ -14,8 +15,9 @@
       const hour = now.getHours();
       const minute = now.getMinutes();
       const second = now.getSeconds();
+      const millisecond = now.getMilliseconds();
 
-      const time = hour + ":" + minute + ":" + second;
+      const time = hour + ":" + minute + ":" + second + "." + millisecond;
       document.getElementById("clock").innerText = time;
     }
 
