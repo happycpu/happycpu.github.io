@@ -21,9 +21,9 @@
       const year = now.getFullYear();
 
       const time = hour + ":" + minute + ":" + second + "." + millisecond;
-      const date = day + "일 " + month + "월 " + year;
+      const date = year + "년 " + month + "월 " + day + "일";
 
-      document.getElementById("clock").innerText = time + " | " + date;
+      document.getElementById("clock").innerText = date + " | " + time;
     }
 
     currentTime();
