@@ -20,7 +20,10 @@
       const month = now.getMonth() + 1;
       const year = now.getFullYear();
 
-      const time = hour + ":" + minute + ":" + second + "." + millisecond;
+      const time = hour.toString().padStart(2, '0') + ":" +
+        minute.toString().padStart(2, '0') + ":" +
+        second.toString().padStart(2, '0') + "." +
+        millisecond.toString().padStart(3, '0');
       const date = year + "년 " + month + "월 " + day + "일";
 
       document.getElementById("clock").innerText = date + " | " + time;
