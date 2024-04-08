@@ -1,38 +1,32 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>happycpu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>블록 클릭 게임</title>
+  <style>
+    .block {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      margin: 20px;
+      display: inline-block;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h1>전자시계</h1>
-  <div id="clock" style="font-size: 24px; text-align: center;">
-  </div>
+  <h1>블록 클릭 게임</h1>
+  <p>클릭된 횟수: <span id="clickCount">0</span></p>
+  <div class="block" onclick="incrementClickCount()"></div>
 
   <script>
-    function currentTime() {
-      const now = new Date();
-      const hour = now.getHours();
-      const minute = now.getMinutes();
-      const second = now.getSeconds();
-      const millisecond = now.getMilliseconds();
-      const day = now.getDate();
-      const month = now.getMonth() + 1;
-      const year = now.getFullYear();
+    let clickCount = 0;
 
-      const time = hour.toString().padStart(2, '0') + ":" +
-        minute.toString().padStart(2, '0') + ":" +
-        second.toString().padStart(2, '0') + "." +
-        millisecond.toString().padStart(3, '0');
-      const date = year.toString().padStart(4, '0') + "년 " +
-        month.toString().padStart(2, '0') + "월 " +
-        day.toString().padStart(2, '0') + "일";
-
-      document.getElementById("clock").innerText = date + " | " + time;
+    function incrementClickCount() {
+      clickCount++;
+      document.getElementById('clickCount').textContent = clickCount;
     }
-
-    currentTime();
-    setInterval(currentTime, 100);
   </script>
 </body>
 </html>
