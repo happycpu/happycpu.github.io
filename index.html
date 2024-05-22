@@ -1,32 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>블록 클릭 게임</title>
-  <style>
-    .block {
-      width: 100px;
-      height: 100px;
-      background-color: blue;
-      margin: 20px;
-      display: inline-block;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Encryption</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>블록 클릭 게임</h1>
-  <p>클릭된 횟수: <span id="clickCount">0</span></p>
-  <div class="block" onclick="incrementClickCount()"></div>
-
-  <script>
-    let clickCount = 0;
-
-    function incrementClickCount() {
-      clickCount++;
-      document.getElementById('clickCount').textContent = clickCount;
-    }
-  </script>
+    <div class="container">
+        <h1>String Encryption</h1>
+        <textarea id="inputText" placeholder="Enter text to encrypt"></textarea>
+        <button onclick="encryptText()">Encrypt</button>
+        <textarea id="outputText" placeholder="Encrypted text will appear here" readonly></textarea>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
